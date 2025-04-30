@@ -1,1 +1,1 @@
-# CAN-Kompressor-Steuerung
+# can-kompressor-steuerung
