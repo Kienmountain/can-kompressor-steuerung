@@ -1,0 +1,26 @@
+name: Build CAN-Kompressor
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Restore dependencies
+      run: dotnet restore ./src/CAN_Controller.csproj
+
+    - name: Build Release
+      run: dotnet build ./src/CAN_Controller.csproj --configuration Release --no-restore
