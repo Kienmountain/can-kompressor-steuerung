@@ -1,1 +1,1 @@
-// CAN-Handler mit IXXAT VCI SDK
+// IXXAT CAN-Handler-Klasse

@@ -1,1 +1,1 @@
-// GUI-Code zur CAN-Anbindung
+// WPF MainWindow mit CAN Anbindung
