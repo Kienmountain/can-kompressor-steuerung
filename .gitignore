@@ -1,0 +1,14 @@
+# Ignore build and user-specific files
+bin/
+obj/
+.vscode/
+*.user
+*.suo
+*.log
+*.tmp
+*.cache
+*.exe
+*.dll
+*.pdb
+*.zip
+*.docx
