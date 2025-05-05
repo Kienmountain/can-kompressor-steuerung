@@ -24,7 +24,7 @@ jobs:
         run: dotnet build ./src/CAN_Controller.csproj --configuration Release
 
       - name: Upload .exe artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: CAN-Controller-EXE
           path: |
