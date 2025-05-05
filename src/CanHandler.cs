@@ -1,1 +1,1 @@
-// IXXAT CAN-Handler-Klasse
+// CAN-Handler-Klasse mit VCI4 Support

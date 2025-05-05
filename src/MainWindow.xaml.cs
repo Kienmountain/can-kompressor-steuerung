@@ -1,1 +1,1 @@
-// WPF MainWindow mit CAN Anbindung
+// MainWindow-Logik mit CAN-Kommunikation
