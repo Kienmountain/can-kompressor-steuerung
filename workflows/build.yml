@@ -10,12 +10,21 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: '8.0.x'
-    - name: Restore dependencies
-      run: dotnet restore ./src/CAN_Controller.csproj
-    - name: Build
-      run: dotnet build ./src/CAN_Controller.csproj --configuration Release
+      - uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore ./src/CAN_Controller.csproj
+
+      - name: Build project
+        run: dotnet build ./src/CAN_Controller.csproj --configuration Release
+
+      - name: Publish artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: CAN-Controller-EXE
+          path: ./src/bin/Release/net8.0-windows
